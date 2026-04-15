@@ -1,0 +1,57 @@
+body {
+    background: #e4e5f1;
+    font-family: 'EB Garamond', serif;
+}
+.Hero-logo{
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    align-self: flex-start;
+    width: clamp(50px, 20vw, 110px);
+    height: auto;
+    margin: 10px
+}
+.Hero {
+    display: flex;
+    flex-direction: row;
+}
+.Hero-text .Greetings {
+    font-size: clamp(1.0rem, 3vw, 2.5rem);
+    margin: 5px 30px 0px 20px;
+    padding: 10px;
+
+}
+.Hero-text .hero-description {
+    font-size: clamp(0.875rem, 4vw, 1.25rem);
+    margin: 5px 30px 0px 20px;
+    padding: 10px;
+}
+.Hero-image {
+    display: flex;
+    justify-content: flex-end;
+    margin: 70px 5px 0px 10px;
+    padding: 50px;
+    
+}
+.Hero-image .image {
+    width: clamp(60px, 40vw, 210px);
+    border-radius: 50%;
+    box-shadow: 14px 9px 5px 0px rgb(0, 56, 168), 
+    -14px -9px 7px 0px rgb(214, 2, 112),
+    0 0 15px 10px rgba(155, 79, 150, 0.4);
+    border: rgb(155, 79, 150,0.6) solid 5px;
+   
+    
+}
+@media (max-width: 875px) {
+    .Hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Hero-image {
+        justify-content: center;
+        margin: 20px 0px 0px 0px;
+        padding: 0;
+    }
+}
