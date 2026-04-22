@@ -43,6 +43,8 @@ body {
 .Hero {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .Hero-text .Greetings {
     font-size: clamp(1.0rem, 3vw, 2.5rem);
