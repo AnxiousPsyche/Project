@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css"rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        [class*='col'] {
+            padding: 1rem;
+            background-color: aqua;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <h1>Hello Bootstrap</h1> 
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    <div class="container-sm border">Content</div>
+    <div class="row"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <button className="btn btn-primary"> Primary Button</button>
 </body>
 </html>
