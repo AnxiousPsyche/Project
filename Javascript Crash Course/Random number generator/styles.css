@@ -1,0 +1,20 @@
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#myButton {
+    padding: 5px 25px;
+    font-size: 2em;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(143, 198, 229);
+
+}
+#myLabel {
+    display: block;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+}
