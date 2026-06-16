@@ -24,3 +24,4 @@ if(visaBtn.checked){
     paymentResult.textContent = `You are paying with PayMaya`;
 }
 }
+

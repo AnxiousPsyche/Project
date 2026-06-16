@@ -6,14 +6,19 @@ body{
 #submitBtn
 {
     font-size: 1em;
-    background-color: lightblue;
+    background-color: transparent;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: url('smeagol.png') 0 0,auto;
 }
-#submitBtn:hover
-{
-    background-color: rgb(70, 70, 230);
-    color: white;
+#submitBtn:hover img {
+    content: url('smeagolhover.png');
+    width: 100px;
+    height: 100px;
+}
+.btn-img{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
 }
