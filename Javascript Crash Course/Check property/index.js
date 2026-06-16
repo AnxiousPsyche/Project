@@ -9,9 +9,18 @@ const paymentResult = document.getElementById("paymentResult");
 
 
 submitBtn.onclick = function(){
-    if(myCheckBox.checked){
+if(myCheckBox.checked){
         subResult.textContent = `You are subscribed!`;
-    }else{
+}else{
         subResult.textContent = `You are not subscribed!`;
     }
+if(visaBtn.checked){
+    paymentResult.textContent = `You are paying with Visa`;
+}else if(masterCardBtn.checked){
+    paymentResult.textContent = `You are paying with MasterCard`;
+}else if(gCashBtn.checked){
+    paymentResult.textContent = `You are paying with GCash`;
+}else if(payMayaBtn.checked){
+    paymentResult.textContent = `You are paying with PayMaya`;
+}
 }
