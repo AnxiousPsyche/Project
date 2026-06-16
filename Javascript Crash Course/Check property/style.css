@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana;
+    font-size: 2em;
+    cursor: url('smeagol.png') 0 0,auto;
+}
+#submitBtn
+{
+    font-size: 1em;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: url('smeagol.png') 0 0,auto;
+}
+#submitBtn:hover
+{
+    background-color: rgb(70, 70, 230);
+    color: white;
+}
