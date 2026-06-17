@@ -1,6 +1,7 @@
 body {
     background: #e4e5f1;
     font-family: 'EB Garamond', serif;
+    cursor: pointer;
 }
 .Hero-header{
     display: flex;
@@ -39,6 +40,13 @@ body {
     display: flex;
     font-size: 18px;
     margin-left: 10px;
+}
+#themeIcon {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 18px;
 }
 .Hero {
     display: flex;
