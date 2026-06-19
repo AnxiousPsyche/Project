@@ -1,6 +1,6 @@
 body {
     background: #e4e5f1;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Nunito', sans-serif, bold;
     cursor: pointer;
 }
 .Hero-header{
@@ -46,12 +46,13 @@ body {
     border: none;
     color: inherit;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    transform: scaleX(-1);
 }
 .Hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .Hero-text .Greetings {
@@ -67,19 +68,38 @@ body {
 }
 .Hero-image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     margin: 70px 5px 0px 10px;
     padding: 50px;
+    width: clamp(300px, 40vw, 500px);
     
 }
 .Hero-image .image {
     width: clamp(60px, 40vw, 210px);
-    border-radius: 50%;
-    box-shadow: 14px 9px 5px 0px rgb(0, 56, 168), 
-    -14px -9px 7px 0px rgb(214, 2, 112),
-    0 0 15px 10px rgba(155, 79, 150, 0.4);
-    border: rgb(155, 79, 150,0.6) solid 5px;
-   
+    border-radius: 7%;
+    box-shadow:  14px 9px  30px rgba(0, 56, 168, 0.20),
+        0px 0px 60px rgba(214, 2, 112, 0.30),
+        -10px -25px 120px rgba(155, 79, 150, 0.20);
+    width: clamp(200px, 25vw, 300px);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+    0% {
+        box-shadow:  14px 9px  30px rgba(0, 56, 168, 0.45),
+        0px 0px 50px rgba(214, 2, 112, 0.30),
+        -10px -25px 120px rgba(155, 79, 150, 0.20);
+    }
+    50% {
+        box-shadow: 14px 9px 30px rgba(0, 56, 168, 0.60),
+        0px 0px 50px rgba(214, 2, 112, 0.50),
+        -10px -25px 120px rgba(155, 79, 150, 0.60);
+    }
+    100% {
+        box-shadow:   14px 9px 30px rgba(0, 56, 168, 0.45),
+        0px 0px 50px rgba(214, 2, 112, 0.30),
+        -10px -25px 120px rgba(155, 79, 150, 0.20);
+    }
     
 }
 @media (max-width: 875px) {
