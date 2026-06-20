@@ -66,37 +66,46 @@ body,h3,h4,h5,h6,p,span,button {
     display: flex;
     flex-direction: row;     /* sidebar left, content right */
     align-items: center; /* pin sidebar to the top */
-    gap: 20px;
-   
+    gap: 20px;  
 }
 
 .sidebar {
     display: flex;
-    flex-direction: column;  /* About me on top, Socials below */
-    gap: 140px;
-    width: fit-content;
-    flex-shrink: 0;
-    margin-left: -30px;          /* sidebar never squishes */
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
 }
-
 .section-label {
-    font-family: "Space Mono", monospace;
-    font-style: italic;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 5px;
-    white-space: nowrap;
+    gap: 10px;
     opacity: 0.7;
+    font-size: 1rem;
+}
+.middle-line {
+    width: 140px;
+}
+.section-label span {
+    margin-left: -500px;
+    align-items: center;
+    font-size: 1.4rem;
+    font-style: italic;
 }
 .section-line {
-    width: 50px;
+    width: 100px;
     height: 2px;
     background: #888;
     position: relative;
     overflow: hidden;
+}
+.top-line {
+    width: 120px;
+    margin-left: -445px;
+}
+
+.bottom-line {
+    width: 120px;
+    margin-left: -445px;
 }
 .section-line::after{
     content:"";
