@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3c90881da3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,66 +24,49 @@
         <div class="nav-bar">
             <div class="location">
             <i class="fa-solid fa-location-dot"></i> 
-            <span class="location-text">Manila, Philippines</span></div>
+            <span class="location-text">Manila, Philippines</span>
+            </div>
             <span class="time">12:51:00</span>
             <div class="mail"> 
-            <i class="fa-regular fa-envelope"></i></div> 
-            <button id="themeIcon"><i class="bi bi-moon-fill"></i></i></button>
+            <button id="themeIcon"><i class="bi bi-moon-fill"></i></button>
+            </div>
         </div>
     </nav>
     </header>
 <main>
-    <div class="Hero">
-        <div class="Hero-text">
-            <h2 class="Greetings">Hi! <br>My name is Leah Almazan</h2>
-            <p class="hero-description"> I’m currently building my skills in software development, combining my background in Customer Service and Healthcare with a passion for creating simple, user-friendly apps and websites.</p>
-            <p class="hero-description">I enjoy turning ideas into functional, visually engaging projects, with a growing interest in gaming and interactive software.</p>
-            <p class="hero-description">Feel free to explore my projects and what I’m currently learning. Thanks for stopping by! 🚀</p>
+<section id="about" class="content-section">
+    <div class="sidebar">
+        <div class="section-label">
+          <span>About Me</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-line-2"></div>
+        <div class="section-line-3"></div>
+    </div>
+            <div class="section-body">
+            <div class="hero-container">
+                <div class="row align-items-center">
+                    <div class ="col-md-6">
+                    <h1 class="Greetings">Hi! I'm Leah</h1>
+                    <h2 class="Sub-greetings">An Aspiring Software Developer</h2>
+                    <h2 class="Sub-greetings">Based in Philippines</h2>
+                </div>
+                    <div class="col-md-6">
+                    <img src="/Web design ideas/HeroID.jpg" alt="Hero Image" id="heroID" class="heroimage">
+                    </div>  
+                <div class = "row">
+                    <div class="col-12">
+                        <div class ="Hero-desContainer">
+                        <p class="hero-description"> I’m currently building my skills in software development, combining my background in Customer Service and Healthcare with a passion for creating simple, user-friendly apps and websites.</p>
+                        <p class="hero-description">I enjoy turning ideas into functional, visually engaging projects, with a growing interest in gaming and interactive software.</p>
+                        <p class="hero-description">Feel free to explore my projects and what I’m currently learning. Thanks for stopping by! 🚀</p>
+                        </div>
+                    </div>
+                </div>  
             </div>
-        <div class="Hero-image">
-            <img src="/Web design ideas/HeroID.jpg" alt="Hero Image" id="heroID" class="image">  
         </div>
     </div>
+</section>
 </main>
-    <form>
-        <div>
-            <h2 class="contact">Contact Me</h2>
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname"  placeholder="Leah" required>
-        </div>
-        <br>
-        <div>
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" placeholder="Almazan" required>
-        </div>
-        <br>        
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" required >
-        </div>
-        <br>
-        <div>
-            <label for ="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
-        </div>
-        <br>
-        <div>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message here..."></textarea>
-        </div>
-        <br>
-        <div>
-            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-            <label for="subscribe">Send me a copy of this form</label>
-        </div>
-        <br>
-        <div>
-            <input type="reset" value="Reset">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
-    <footer>
-                <p>&copy; 2026 My Project. All rights reserved.</p>
-        </footer>
 <script src="index.js"></script>
 </body>

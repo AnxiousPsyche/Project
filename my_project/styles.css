@@ -1,7 +1,8 @@
-body {
-    background: #e4e5f1;
-    font-family: 'Nunito', sans-serif, bold;
-    cursor: pointer;
+body,h3,h4,h5,h6,p,span,button {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    cursor: default;
 }
 .Hero-header{
     display: flex;
@@ -48,41 +49,122 @@ body {
     cursor: pointer;
     font-size: 16px;
     transform: scaleX(-1);
+    transition: transform 0.3s ease;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
 }
-.Hero {
+#themeIcon:hover {
+    transform: scale(1.08);
+    background-color: rgba(128,128,128,0.15);
+}
+.content-section {
+    max-width: 1200px;
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: row;     /* sidebar left, content right */
+    align-items: center; /* pin sidebar to the top */
+    gap: 20px;
+   
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;  /* About me on top, Socials below */
+    gap: 140px;
+    width: fit-content;
+    flex-shrink: 0;
+    margin-left: -30px;          /* sidebar never squishes */
+}
+
+.section-label {
+    font-family: "Space Mono", monospace;
+    font-style: italic;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+.section-line {
+    width: 50px;
+    height: 2px;
+    background: #888;
+    position: relative;
+    overflow: hidden;
+}
+.section-line::after{
+    content:"";
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    animation: loadingLine 2s linear infinite;
+}
+@keyframes loadingLine {
+    from {
+        left: -100%;
+    }
+    to {
+        left:100%
+    }
+}
+.section-body {
+    flex: 1;  /* takes up all remaining space */
+}
+.hero-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 .Hero-text .Greetings {
-    font-size: clamp(1.0rem, 3vw, 2.5rem);
     margin: 5px 30px 0px 20px;
     padding: 10px;
+}
+.Greetings{
+   font-size: clamp(2.0rem, 10vw, 4.5rem);
+}
+.Sub-greetings {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    margin: 5px 30px 0px 40px;
 
 }
-.Hero-text .hero-description {
-    font-size: clamp(0.875rem, 4vw, 1.25rem);
-    margin: 5px 30px 0px 20px;
+.hero-description {
+    font-size: clamp(0.875rem, 4vw, 1.05rem);
+    margin: 0px 0px 0px 0px;
     padding: 10px;
+    font-weight: 400;
 }
-.Hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 70px 5px 0px 10px;
-    padding: 50px;
-    width: clamp(300px, 40vw, 500px);
-    
+.Hero-desContainer {
+    margin: 60px 30px 0px 20px;
+    padding: 20px;
+    border: solid 5px #ddd8d8;
+    border-radius: 10px;
+    max-width: 1000px
 }
-.Hero-image .image {
-    width: clamp(60px, 40vw, 210px);
+.heroimage {
+    border: 5px rgba(155, 79, 150, 0.20);
     border-radius: 7%;
     box-shadow:  14px 9px  30px rgba(0, 56, 168, 0.20),
         0px 0px 60px rgba(214, 2, 112, 0.30),
         -10px -25px 120px rgba(155, 79, 150, 0.20);
-    width: clamp(200px, 25vw, 300px);
+    width: clamp(200px, 25vw, 240px);
+    transition: transform 0.3s ease;
     animation: glowPulse 3s ease-in-out infinite;
+}
+.heroimage:hover {
+     transform: scale(1.08);
 }
 @keyframes glowPulse {
     0% {
@@ -99,17 +181,5 @@ body {
         box-shadow:   14px 9px 30px rgba(0, 56, 168, 0.45),
         0px 0px 50px rgba(214, 2, 112, 0.30),
         -10px -25px 120px rgba(155, 79, 150, 0.20);
-    }
-    
-}
-@media (max-width: 875px) {
-    .Hero {
-        flex-direction: column;
-        align-items: center;
-    }
-    .Hero-image {
-        justify-content: center;
-        margin: 20px 0px 0px 0px;
-        padding: 0;
     }
 }
