@@ -89,3 +89,25 @@ function showTab(tabId) {
         .getElementById(tabId)
         .classList.add("active");
 }
+// FOR TIMELINE ACCORDION//
+
+const timelineCards =
+document.querySelectorAll(".timeline-content");
+
+timelineCards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        timelineCards.forEach(item => {
+
+            if(item !== card){
+                item.classList.remove("active");
+            }
+
+        });
+
+        card.classList.toggle("active");
+
+    });
+
+});
