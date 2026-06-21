@@ -59,72 +59,39 @@ body,h3,h4,h5,h6,p,span,button {
     transform: scale(1.08);
     background-color: rgba(128,128,128,0.15);
 }
-.content-section {
-    max-width: 1200px;
-    width: 90%;
-    margin: 80px auto;
-    display: flex;
-    flex-direction: row;     /* sidebar left, content right */
-    align-items: center; /* pin sidebar to the top */
-    gap: 20px;  
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 250px;
-}
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: 0.7;
-    font-size: 1rem;
-}
-.middle-line {
-    width: 140px;
-}
-.section-label span {
-    margin-left: -500px;
-    align-items: center;
-    font-size: 1.4rem;
-    font-style: italic;
-}
-.section-line {
-    width: 100px;
-    height: 2px;
-    background: #888;
-    position: relative;
-    overflow: hidden;
-}
-.top-line {
-    width: 120px;
-    margin-left: -445px;
-}
-
-.bottom-line {
-    width: 120px;
-    margin-left: -445px;
-}
-.section-line::after{
-    content:"";
-
-    position: absolute;
-    top: 0;
-    left: -100%;
+.custom-navbar {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #1f1b2e;
+    border: 2px solid #9b4f96;
+    border-radius: 15px;
+    padding: 8px;
     width: 100%;
-    height: 100%;
-    background: #000;
-    animation: loadingLine 2s linear infinite;
+    margin: 40px auto;
 }
-@keyframes loadingLine {
-    from {
-        left: -100%;
-    }
-    to {
-        left:100%
-    }
+
+.custom-navbar .nav-link {
+    color: white !important;
+
+    padding: 10px 24px;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    background: rgba(212,181,255,0.2);
+
+    color: #d4b5ff !important;
+}
+
+.custom-navbar .nav-link.active {
+    background: #d4b5ff;
+
+    color: #1f1b2e !important;
+
+    font-weight: bold;
 }
 .section-body {
     flex: 1;  /* takes up all remaining space */
@@ -134,6 +101,11 @@ body,h3,h4,h5,h6,p,span,button {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.col-md-6:first-child{
+    text-align: center;
 }
 .Hero-text .Greetings {
     margin: 5px 30px 0px 20px;
@@ -142,25 +114,34 @@ body,h3,h4,h5,h6,p,span,button {
 .Greetings{
    font-size: clamp(2.0rem, 10vw, 4.5rem);
 }
+
 .Sub-greetings {
     display: flex;
     align-items: center;
     justify-content:left;
     margin: 5px 30px 0px 40px;
-
 }
+
+.heroimage{
+    display: block;
+    margin: 0 auto;
+}
+
 .hero-description {
     font-size: clamp(0.875rem, 4vw, 1.05rem);
     margin: 0px 0px 0px 0px;
     padding: 10px;
     font-weight: 400;
+    max-width: 800px;
+    margin: 40px auto;
+    max-height: 600px;
 }
 .Hero-desContainer {
-    margin: 60px 30px 0px 20px;
-    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    padding: 30px;
     border: solid 5px #ddd8d8;
     border-radius: 10px;
-    max-width: 1000px
 }
 .heroimage {
     border: 5px rgba(155, 79, 150, 0.20);
@@ -168,7 +149,7 @@ body,h3,h4,h5,h6,p,span,button {
     box-shadow:  14px 9px  30px rgba(0, 56, 168, 0.20),
         0px 0px 60px rgba(214, 2, 112, 0.30),
         -10px -25px 120px rgba(155, 79, 150, 0.20);
-    width: clamp(200px, 25vw, 240px);
+    width: clamp(200px, 25vw, 260px);
     transition: transform 0.3s ease;
     animation: glowPulse 3s ease-in-out infinite;
 }
@@ -191,4 +172,61 @@ body,h3,h4,h5,h6,p,span,button {
         0px 0px 50px rgba(214, 2, 112, 0.30),
         -10px -25px 120px rgba(155, 79, 150, 0.20);
     }
+}
+@media (max-width 1400px){
+    .sidebar {
+        transform: translateX(-150px);
+    }
+}
+@media (max-width: 1200px){
+    .sidebar{
+        transform: translateX(-60px);
+    }
+     .top-line {
+        width: 100px;
+    }
+
+    .middle-line {
+        width: 120px;
+    }
+
+    .bottom-line {
+        width: 100px;
+    }
+}
+@media (max-width: 992px) {
+
+    .sidebar {
+        transform: translateX(0);
+    }
+    .top-line {
+        width: 80px;
+    }
+
+    .middle-line {
+        width: 100px;
+    }
+
+    .bottom-line {
+        width: 80px;
+    }
+}
+@media (max-width: 768px) {
+
+    .top-line {
+        width: 60px;
+    }
+
+    .middle-line {
+        width: 80px;
+    }
+
+    .bottom-line {
+        width: 60px;
+    }
+
+    .section-label span {
+        font-size: 1.1rem;
+    }
+
 }
