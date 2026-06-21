@@ -9,7 +9,7 @@ darkModeToggle.onclick = function () {
         document.body.style.color = "#2C2C2C";
         themeIcon.classList.remove("bi-brightness-high-fill");
         themeIcon.classList.add("bi-moon-fill");
-        heroImage.src="/web design ideas/HeroID.jpg";        
+        heroImage.src="images/HeroID.jpg";        
         isDarkMode = false;
 
     } else {
@@ -17,7 +17,7 @@ darkModeToggle.onclick = function () {
         document.body.style.color = "#fafafa";
         themeIcon.classList.remove("bi-moon-fill");
         themeIcon.classList.add("bi-brightness-high-fill");
-        heroImage.src="/my_project/images/HeroIDDark1.jpg";
+        heroImage.src="images/HeroIDDark1.jpg";
         isDarkMode = true;
     }
 }
@@ -76,18 +76,22 @@ if (navigator.geolocation) {
     startClock(timezone);
 }
 
-function showTab(tabId) {
+function showTab(tabId, button) {
 
-    const sections =
-        document.querySelectorAll(".tab-content");
+    document.querySelectorAll(".tab-content")
+        .forEach(section => {
+            section.classList.remove("active");
+        });
 
-    sections.forEach(section => {
-        section.classList.remove("active");
-    });
+    document.querySelectorAll(".nav-link")
+        .forEach(link => {
+            link.classList.remove("active");
+        });
 
-    document
-        .getElementById(tabId)
+    document.getElementById(tabId)
         .classList.add("active");
+
+    button.classList.add("active");
 }
 // FOR TIMELINE ACCORDION//
 

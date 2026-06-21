@@ -81,13 +81,19 @@ body,h3,h4,h5,h6,p,span,button {
 }
 
 .custom-navbar .nav-link {
+    background: transparent;
+    border: none;
     color: white !important;
-
     padding: 10px 24px;
-
     border-radius: 10px;
-
     transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-navbar .nav-item {
+    flex: 1;
+    text-align: center;
+}
 }
 
 .custom-navbar .nav-link:hover {
