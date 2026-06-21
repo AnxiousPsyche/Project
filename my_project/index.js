@@ -17,7 +17,7 @@ darkModeToggle.onclick = function () {
         document.body.style.color = "#fafafa";
         themeIcon.classList.remove("bi-moon-fill");
         themeIcon.classList.add("bi-brightness-high-fill");
-        heroImage.src="/web design ideas/HeroIDDark1.jpg";
+        heroImage.src="/my_project/images/HeroIDDark1.jpg";
         isDarkMode = true;
     }
 }
