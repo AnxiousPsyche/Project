@@ -44,13 +44,14 @@
                     <h2 class="Sub-greetings">An Aspiring Software Developer</h2>
                     <h2 class="Sub-greetings">Based in Philippines</h2>
                 </div>
-
-                    <div class="col-md-6">
-                    <img src="/Web design ideas/HeroID.jpg" 
-                    alt="Hero Image" 
-                    id="heroID" 
-                    class="heroimage">                   
-                </div>
+                    <div class="col-md-6 hero-image-column">
+                        <div class="col-md-6">
+                        <img src="/Web design ideas/HeroID.jpg" 
+                        alt="Hero Image" 
+                        id="heroID" 
+                        class="heroimage">                   
+                        </div>
+                    </div>
                 </div>
             </div>
                     <nav class="navbar navbar-expand-lg custom-navbar">
@@ -72,35 +73,91 @@
                                     <ul class="navbar-nav">
                                         
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#about">About
-                                            </a>
+                                            <button class="nav-link" onclick="showTab('about')">About Me
+                                            </button>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#experience">Experience</a>
+                                            <button class="nav-link" onclick="showTab('timeline')">Timeline
+                                            </button>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#skills">Skills</a>
+                                            <button class="nav-link" onclick="showTab('skills')">Skills
+                                            </button>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#projects">Projects</a>
+                                            <button class="nav-link" onclick="showTab('projects')">Projects
+                                            </button>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#contact">Contact</a>
+                                            <button class="nav-link" onclick="showTab('contact')">Contact
+                                            </button>
                                         </li>
                                     </ul>
                                 </div>
                         </div>
-                    </nav> 
-                <div class = "row">
-                    <div class="col-12">
-                        <div class ="Hero-desContainer">
-                        <p class="hero-description"> I’m currently building my skills in software development, combining my background in Customer Service and Healthcare with a passion for creating simple, user-friendly apps and websites.</p>
-                        <p class="hero-description">I enjoy turning ideas into functional, visually engaging projects, with a growing interest in gaming and interactive software.</p>
-                        <p class="hero-description">Feel free to explore my projects and what I’m currently learning. Thanks for stopping by! 🚀</p>
+                    </nav>
+                    <section id="about" class="tab-content active">
+                            <div class="about-card">
+                                <h3>👋 About Me</h3>
+                                <p class="hero-description">
+                                    I'm currently building my skills in software development,
+                                    combining my background in Customer Service and Healthcare
+                                    with a passion for creating simple, user-friendly apps and websites.
+                                </p>
+                                <p class="hero-description">
+                                    I enjoy turning ideas into functional, visually engaging projects,
+                                    with a growing interest in gaming and interactive software.
+                                </p>
+                                <p class="hero-description">
+                                    Feel free to explore my projects and what I'm currently learning. Thanks for stopping by!
+                                </p>
+                            </div>
+                    </section>
+                <section id="timeline" class="tab-content">
+                    <h2 class="section-title">Life and Career Journey</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Care Worker</h3>
+                                    <h4>Kyoto, Japan</h4>
+                                    <span>Dec 2024 - Dec 2025</span>
+                                    <p>
+                                        Assisted residents with daily living activities,
+                                        meal preparation, and healthcare support.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Customer Support</h3>
+                                    <h4>Microsourcing</h4>
+                                    <span>Apr 2023 - Oct 2024</span>
+                                    <p>
+                                        Provided player support, technical troubleshooting,and account assistance.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Player Support</h3>
+                                    <h4>Pasig, Manila</h4>
+                                    <span>October 2021 - Feb 2023</span>
+                                    <p>
+                                        Provided player support, technical troubleshooting,and account assistance.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>  
+                        <section id="skills" class="tab-content"></section>
+                        <section id="projects" class="tab-content"></section>
+                        <section id="contact" class="tab-content"></section>
+
+
 </section>
 </main>
 

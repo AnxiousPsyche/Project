@@ -75,3 +75,17 @@ if (navigator.geolocation) {
     document.querySelector(".location-text").textContent = `${city} (approximate)`;
     startClock(timezone);
 }
+
+function showTab(tabId) {
+
+    const sections =
+        document.querySelectorAll(".tab-content");
+
+    sections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    document
+        .getElementById(tabId)
+        .classList.add("active");
+}
