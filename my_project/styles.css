@@ -229,6 +229,7 @@ body,h3,h4,h5,h6,p,span,button {
     background: #9b4f96;
 
     transform-origin: top;
+    
     animation: drawLine 1.5s ease forwards;
 }
 @keyframes drawLine {
@@ -332,6 +333,77 @@ body,h3,h4,h5,h6,p,span,button {
 
 .tab-content.active {
     display: block;
+}
+
+
+/*SKILLS SECTION*/
+
+.skills-grid{
+    max-width:900px;
+    margin:0 auto;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill-pill{
+    width:180px;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    border:2px solid #9b4f96;
+    border-radius:15px;
+
+    background:rgba(155,79,150,.05);
+
+    transition:.3s ease;
+}
+
+.skill-pill:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(155,79,150,.30);
+}
+
+.skill-pill i{
+    font-size:2rem;
+    color:#d4b5ff;
+}
+
+.skill-pill span{
+    font-size:1rem;
+}
+
+
+/*CONTACTS*/
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.contact-links a{
+    text-decoration:none;
+    color:inherit;
+    border:2px solid #9b4f96;
+    border-radius:12px;
+    padding:12px 20px;
+    transition:all .3s ease;
+}
+
+.contact-links a:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(155,79,150,.25);
 }
 
 
