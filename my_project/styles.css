@@ -221,18 +221,23 @@ body,h3,h4,h5,h6,p,span,button {
 
 .timeline::before {
     content: "";
-
     position: absolute;
-
     left: 15px;
-
     top: 0;
-
     width: 3px;
-
     height: 100%;
-
     background: #9b4f96;
+
+    transform-origin: top;
+    animation: drawLine 1.5s ease forwards;
+}
+@keyframes drawLine {
+    from {
+    }
+
+    to {
+        transform: scaleY(1);
+    }
 }
 
 .timeline-details {
